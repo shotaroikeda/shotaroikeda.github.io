@@ -39,7 +39,7 @@ function arrow_animate(clicked_data)
 
 function size_handler()
 {
-    if (window.innerWidth < 992)
+    if (window.innerWidth < 992 || screen.width < 992)
     {
 	// Set up formatting to reduce bugs
         $("#menu-icon-canvas").css({
