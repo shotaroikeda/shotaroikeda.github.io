@@ -1,4 +1,5 @@
 var g_doc_height = 0;
+var mobile_view = false;
 
 function docFill() {
     if($(document).height() <= $(window).height())
@@ -39,7 +40,7 @@ function arrow_animate(clicked_data)
 
 function size_handler()
 {
-    if (window.innerWidth < 992)
+    if (window.innerWidth <= 992)
     {
         $("#menu-icon-canvas").css({
             "top": 0,
@@ -50,7 +51,7 @@ function size_handler()
             "overflow": "hidden",
             "position": "fixed"
         });
-	$("#menu-close-canvas").css({
+        $("#menu-close-canvas").css({
             "top": 0,
             "left": 0,
             "width": "50px",
@@ -58,17 +59,27 @@ function size_handler()
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
-	});
+        });
         $("#menu-icon-canvas").show();
         $("#menu-close-canvas").hide();
         $(".sidebar-elem").hide();
         $(".sidebar-elem").addClass("mobile-menu");
+        $(".sidebar-elem > .restFill").remove();
+        mobile_view = true;
     }
     else
     {
         $("#menu-icon-canvas").hide();
         $("#menu-close-canvas").hide();
-        $(".sidebar-elem").show();
+        $(".sidebar-elem").show(function () {
+            if (mobile_view)
+            {
+                $(".sidebar-elem").append("<div class=\"restFill\"></div>");
+                g_doc_height = 0;
+                docFill();
+            }
+            mobile_view = false;
+        });
         $(".sidebar-elem").removeClass("mobile-menu");
     }
 }
@@ -112,10 +123,10 @@ $(document).ready(function () {
     });
 
     $("#menu-close-canvas").click(function () {
-	$("#menu-close-canvas").fadeOut(400);
-	$(".sidebar-elem").animate({ "right": "-=320px" }, 400, function() {
-	    $("#menu-icon-canvas").fadeIn(800);
-	});
+        $("#menu-close-canvas").fadeOut(400);
+        $(".sidebar-elem").animate({ "right": "-=320px" }, 400, function() {
+            $("#menu-icon-canvas").fadeIn(800);
+        });
     });
 });
 
