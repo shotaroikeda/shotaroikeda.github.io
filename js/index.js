@@ -40,7 +40,7 @@ function arrow_animate(clicked_data)
 
 function size_handler()
 {
-    if (window.innerWidth <= 992)
+    if (window.innerWidth < 992)
     {
         $("#menu-icon-canvas").css({
             "top": 0,
@@ -71,7 +71,8 @@ function size_handler()
     {
         $("#menu-icon-canvas").hide();
         $("#menu-close-canvas").hide();
-        $(".sidebar-elem").show(function () {
+        $(".sidebar-elem").removeClass("mobile-menu");
+        $(".sidebar-elem").show(400, function () {
             if (mobile_view)
             {
                 $(".sidebar-elem").append("<div class=\"restFill\"></div>");
@@ -80,7 +81,6 @@ function size_handler()
             }
             mobile_view = false;
         });
-        $(".sidebar-elem").removeClass("mobile-menu");
     }
 }
 
