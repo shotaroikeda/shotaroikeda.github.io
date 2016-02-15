@@ -1,6 +1,5 @@
 var g_doc_height = 0;
 
-
 function docFill() {
     if($(document).height() <= $(window).height())
     {
@@ -38,8 +37,64 @@ function arrow_animate(clicked_data)
     }
 }
 
+function size_handler()
+{
+    if (window.innerWidth < 992)
+    {
+        $("#menu-icon-canvas").css({
+            "top": 0,
+            "right": 0,
+            "width": "50px",
+            "height": "50px",
+            "z-index": 999,
+            "overflow": "hidden",
+            "position": "fixed"
+        });
+	$("#menu-close-canvas").css({
+            "top": 0,
+            "left": 0,
+            "width": "50px",
+            "height": "50px",
+            "z-index": 999,
+            "overflow": "hidden",
+            "position": "fixed"
+	});
+        $("#menu-icon-canvas").show();
+        $("#menu-close-canvas").hide();
+        $(".sidebar-elem").hide();
+        $(".sidebar-elem").addClass("mobile-menu");
+    }
+    else
+    {
+        $("#menu-icon-canvas").hide();
+        $("#menu-close-canvas").hide();
+        $(".sidebar-elem").show();
+        $(".sidebar-elem").removeClass("mobile-menu");
+    }
+}
+
 $(document).ready(function () {
+    // draw the canvas for resize
+    var can = document.getElementById("menu-icon-canvas");
+    var ctx = can.getContext('2d');
+    var img = new Image();
+    img.onload = function () {
+        ctx.drawImage(img, 0, 0);
+    };
+    img.src = "src/menu-small.svg";
+
+    var can2 = document.getElementById("menu-close-canvas");
+    var ctx2 = can2.getContext('2d');
+    var img2 = new Image();
+    img2.onload = function () {
+        ctx2.drawImage(img2, 0, 0);
+    };
+    img2.src = "src/menu-close.svg";
+
+    $("#menu-close-canvas").hide();
+
     docFill();
+    size_handler();
     // Set up the arrow to corresponding page
     $(".active-page > .arrow-vertical-center").append("<span class=\"arrow\">&#x25BA;</span>");
 
@@ -48,8 +103,23 @@ $(document).ready(function () {
     $("#projects-page").click(["#projects-page"], arrow_animate);
     $("#events-page").click(["#events-page"], arrow_animate);
     $("#contact-page").click(["#contact-page"], arrow_animate);
+    $("#menu-icon-canvas").click(function () {
+        $(".sidebar-elem").show();
+        $("#menu-icon-canvas").fadeOut(400, function (){
+            $(".sidebar-elem").animate({ "right": "+=320px" }, 400);
+            $("#menu-close-canvas").fadeIn(400);
+        });
+    });
+
+    $("#menu-close-canvas").click(function () {
+	$("#menu-close-canvas").fadeOut(400);
+	$(".sidebar-elem").animate({ "right": "-=320px" }, 400, function() {
+	    $("#menu-icon-canvas").fadeIn(800);
+	});
+    });
 });
 
 $(window).resize(function () {
     docFill();
+    size_handler();
 });
