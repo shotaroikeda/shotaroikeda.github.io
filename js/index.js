@@ -12,4 +12,7 @@ function docFill() {
 };
 
 $(document).ready(docFill);
-$(window).resize(docFill);
+$(window).resize(function () {
+    console.log("window was detected for resize!");
+    docFill();
+});
