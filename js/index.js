@@ -9,7 +9,7 @@ function docFill() {
     });
 
     $(".restFill").css({
-        "height": g_doc_height+40-$(".sidebar-elem").height()-$(".restFill").height()
+        "height": g_doc_height-$(".sidebar-elem").height()
     });
 };
 
