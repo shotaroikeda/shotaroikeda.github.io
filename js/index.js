@@ -93,7 +93,7 @@ function size_handler()
 	    "overflow-x": "visible",
 	    "overflow-y": "visible"
 	});
-        $(".sidebar-elem").show(400, function () {
+        $(".sidebar-elem").show(0, function () {
             if (mobile_view)
             {
                 $(".sidebar-elem").append("<div class=\"restFill\"></div>");
