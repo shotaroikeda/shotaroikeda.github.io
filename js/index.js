@@ -25,13 +25,13 @@ function arrow_animate(clicked_data)
     else
     {
         // Handle the fading animations
-        $(".active-page > .vertical-center > span").fadeOut(400, function () {
-            $(".active-page > .vertical-center > span").remove();
+        $(".active-page > .arrow-vertical-center > span").fadeOut(400, function () {
+            $(".active-page > .arrow-vertical-center > span").remove();
             $(".active-page").removeClass("active-page");
             $(domElem).find(".col-xs-1").addClass("active-page");
-            $(".active-page > .vertical-center")
+            $(".active-page > .arrow-vertical-center")
                 .append("<span class=\"arrow\" style=\"display: none;\">&#x25BA;</span>");
-            $(".active-page > .vertical-center > span").fadeIn(400);
+            $(".active-page > .arrow-vertical-center > span").fadeIn(400);
         });
 
         // Handle the document animations
@@ -41,7 +41,7 @@ function arrow_animate(clicked_data)
 $(document).ready(function () {
     docFill();
     // Set up the arrow to corresponding page
-    $(".active-page > .vertical-center").append("<span class=\"arrow\">&#x25BA;</span>");
+    $(".active-page > .arrow-vertical-center").append("<span class=\"arrow\">&#x25BA;</span>");
 
     // add event listeners
     $("#home-page").click(["#home-page"], arrow_animate);

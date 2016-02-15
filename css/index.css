@@ -2,8 +2,8 @@
     background-color: #ecf0f1;
     border-radius: 30px;
     margin-top: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
     margin-bottom: 50px;
 }
 
@@ -18,16 +18,33 @@ body {
     background-color: #1E272B;
 }
 
+/**********************/
+/* Sidebar Management */
+/**********************/
+
 .sidebar-elem {
     background-color: #D14841;
     height: auto;
+    font-size: 80%;
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+#name-profile {
+    color: #ecf0f1;
+    text-align: center;
+}
 
 .arrow {
     color: #1E272B;
     margin-left: -70px;
-    font-size: 600%;
+    font-size: 150px;
 }
 
 .vertical-center {
@@ -36,9 +53,30 @@ body {
     transform: translateY(-50%);
 }
 
+.arrow-vertical-center {
+    position: relative;
+    top: -45%;
+    /* transform: translateY(-40%); */
+    /* position: relative; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+}
+
 .bar-box {
-    height: 300px;
+    height: 100px;
     text-align: center;
-    font-size: xx-large;
     color: #ecf0f1;
+}
+
+/*************************/
+/* Bootstrap Desktop fix */
+/*************************/
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
