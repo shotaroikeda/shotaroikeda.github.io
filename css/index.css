@@ -1,0 +1,25 @@
+body {
+    background-color: #F2BE7B;
+}
+
+.row {
+    background-color: #D14841;
+}
+
+.arrow {
+    background-color: #D14841;
+    color: #F2BE7B;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar-box {
+    height: 300px;
+    text-align: center;
+    font-size: xx-large;
+    color: #ecf0f1;
+}
