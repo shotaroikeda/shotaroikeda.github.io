@@ -7,8 +7,9 @@ body {
 }
 
 .arrow {
-    background-color: #D14841;
     color: #F2BE7B;
+    margin-left: -50px;
+    font-size: 600%;
 }
 
 .vertical-center {
