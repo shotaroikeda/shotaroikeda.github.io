@@ -2,16 +2,15 @@ var g_doc_height = 0;
 var mobile_view = false;
 
 function docFill() {
-    if($(document).height() <= $(window).height())
-    {
-        var prev_doc = g_doc_height;
-        g_doc_height = $(document).height() > g_doc_height ? $(document).height() : g_doc_height;
+    var prev_doc = g_doc_height;
+    g_doc_height = $(".container-fluid").height();// > g_doc_height ? $(document).height() : g_doc_height;
+    $(".restFill").css({
+        "height":0
+    });
 
-        if (prev_doc == g_doc_height)
-            return;
-        else
-            $(".restFill").css("height", g_doc_height - $(".sidebar-elem").height());
-    }
+    $(".restFill").css({
+        "height": g_doc_height+40-$(".sidebar-elem").height()-$(".restFill").height()
+    });
 };
 
 function arrow_animate(clicked_data)
