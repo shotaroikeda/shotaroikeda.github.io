@@ -41,6 +41,7 @@ function size_handler()
 {
     if (window.innerWidth < 992)
     {
+	// Set up formatting to reduce bugs
         $("#menu-icon-canvas").css({
             "top": 0,
             "right": 0,
@@ -59,6 +60,19 @@ function size_handler()
             "overflow": "hidden",
             "position": "fixed"
         });
+        $(".mobile-menu").css({
+            "position": "fixed",
+            "z-index": "999",
+            "top": "0",
+            "bottom": "0",
+            "right": "-320px",
+            "text-align": "center",
+            "font-size": "200%",
+            "overflow-x": "hidden",
+            "overflow-y": "scroll",
+            "width": "320px"
+        });
+
         $("#menu-icon-canvas").show();
         $("#menu-close-canvas").hide();
         $(".sidebar-elem").hide();
