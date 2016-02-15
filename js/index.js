@@ -1,9 +1,15 @@
+var g_doc_height = 0;
+
 function docFill() {
     if($(document).height() <= $(window).height())
     {
-	var temp_h = $(window).height() + ($("body").height() - $(".sidebar-elem").height());
-        $(".restFill").css("height", $(document).height() - $(".sidebar-elem").height());
-	console.log(temp_h);
+	var prev_doc = g_doc_height;
+	g_doc_height = $(document).height() > g_doc_height ? $(document).height : g_doc_height;
+
+	if (prev_doc == g_doc_height)
+	    return;
+	else
+            $(".restFill").css("height", g_doc_height - $(".sidebar-elem").height());
     }
 };
 
