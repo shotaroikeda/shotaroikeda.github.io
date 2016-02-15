@@ -1,13 +1,31 @@
-body {
-    background-color: #F2BE7B;
+.content-portion {
+    background-color: #ecf0f1;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
 
-.row {
-    background-color: #D14841;
+.inner-html {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
+body {
+    background-color: #1E272B;
+}
+
+.sidebar-elem {
+    background-color: #D14841;
+    height: auto;
+}
+
 
 .arrow {
-    color: #F2BE7B;
+    color: #1E272B;
     margin-left: -70px;
     font-size: 600%;
 }
