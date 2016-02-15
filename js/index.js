@@ -85,6 +85,14 @@ function size_handler()
         $("#menu-icon-canvas").hide();
         $("#menu-close-canvas").hide();
         $(".sidebar-elem").removeClass("mobile-menu");
+	$(".sidebar-elem").css({
+	    "position": "static",
+	    "right": 0,
+	    "width": "100%",
+	    "overflow": "visible",
+	    "overflow-x": "visible",
+	    "overflow-y": "visible"
+	});
         $(".sidebar-elem").show(400, function () {
             if (mobile_view)
             {
