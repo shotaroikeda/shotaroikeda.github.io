@@ -5,10 +5,6 @@ function docFill() {
         $(".restFill").css("height", $(document).height() - $(".sidebar-elem").height());
 	console.log(temp_h);
     }
-    else
-    {
-        $(".restFill").css("height","auto");
-    };
 };
 
 $(document).ready(docFill);
