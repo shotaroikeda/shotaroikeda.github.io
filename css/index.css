@@ -40,6 +40,10 @@ body {
     top: -45%;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 
 /***************/
 /* Media Query */
@@ -53,10 +57,6 @@ body {
         margin-left: -10px;
         margin-top: 50px;
         margin-bottom: 10px;
-    }
-
-    .no-scroll {
-        overflow-y: hidden;
     }
 
     .inner-html {
