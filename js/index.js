@@ -1,6 +1,15 @@
 var g_doc_height = 0;
 var mobile_view = false;
 
+function scrollListener() {
+    var top = element.scrollTop, totalScroll = element.scrollHeight, currentScroll = top + element.offsetHeight;
+    if ( top === 0 ) {
+        element.scrollTop = 1;
+    } else if ( currentScroll === totalScroll ) {
+        element.scrollTop = top - 1;
+    }
+}
+
 function docFill() {
     var prev_doc = g_doc_height;
     g_doc_height = $(".container-fluid").height();// > g_doc_height ? $(document).height() : g_doc_height;
@@ -137,7 +146,7 @@ $(document).ready(function () {
     $("#contact-page").click(["#contact-page"], arrow_animate);
     $("#menu-icon-canvas").click(function () {
         $(".content-portion").addClass("no-scroll");
-	$(".content-portion").append("<ScrollView scrollEnabled={false}></ScrollView>");
+        document.querySelector(".sidebar-elem").addEventListener("touchstart", scrollListener);
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
             $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth }, 400);
@@ -146,8 +155,8 @@ $(document).ready(function () {
     });
 
     $("#menu-close-canvas").click(function () {
+        document.querySelector(".sidebar-elem").removeEventListener("touchstart", scrollListener);
         $(".content-portion").removeClass("no-scroll");
-        $(".content-portion > ScrollView").remove();
         $("#menu-close-canvas").fadeOut(400);
         $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
