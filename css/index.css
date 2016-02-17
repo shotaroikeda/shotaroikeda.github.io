@@ -1,32 +1,40 @@
-.content-portion {
-    background-color: #ecf0f1;
-    border-radius: 30px;
-    margin-top: 50px;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-bottom: 50px;
-}
-
-.inner-html {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
+/*************/
+/* Universal */
+/*************/
 
 body {
     background-color: #1E272B;
 }
 
-/**********************/
-/* Sidebar Management */
-/**********************/
+/***************/
+/* Media Query */
+/***************/
 @media (max-width: 991px) {
     /* Cell phone orientation */
-    .no-scroll {
-	overflow-y: hidden;
+
+    .content-portion {
+        background-color: #ecf0f1;
+        border-radius: 15px;
+	margin-right: -10px;
+	margin-left: -10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
+    .no-scroll {
+        overflow-y: hidden;
+    }
+
+    .inner-html {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /**********************/
+    /* Sidebar Management */
+    /**********************/
     .mobile-menu {
         position: fixed;
         z-index: 998;
@@ -74,84 +82,105 @@ body {
     }
 
     body {
-	font-size: 30px;
+        font-size: 30px;
     }
 }
 
-.mobile-menu {
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    bottom: 0;
-    right: -320px;
-    text-align: center;
-    font-size: 200%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 320px;
-}
+@media (min-width: 993) {
+    /**********************/
+    /* Sidebar Management */
+    /**********************/
+    .content-portion {
+        background-color: #ecf0f1;
+        border-radius: 30px;
+        margin-top: 50px;
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-bottom: 50px;
+    }
 
-.menu-close-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 50px;
-    z-index: 999;
-    overflow: hidden;
-}
+    .inner-html {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
-.menu-icon-canvas {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: 50px;
-    width: 50px;
-    z-index: 999;
-    overflow: hidden;
-}
+    .mobile-menu {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        bottom: 0;
+        right: -320px;
+        text-align: center;
+        font-size: 200%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 320px;
+    }
 
-.sidebar-elem {
-    background-color: #D14841;
-    height: auto;
-    font-size: 80%;
-}
+    .menu-close-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 50px;
+        width: 50px;
+        z-index: 999;
+        overflow: hidden;
+    }
 
-h1 {
-    font-size: 30px;
-}
+    .menu-icon-canvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 50px;
+        width: 50px;
+        z-index: 999;
+        overflow: hidden;
+    }
 
-h2 {
-    font-size: 25px;
-}
+    .sidebar-elem {
+        background-color: #D14841;
+        height: auto;
+        font-size: 80%;
+    }
 
-#name-profile {
-    color: #ecf0f1;
-    text-align: center;
-}
+    h1 {
+        font-size: 30px;
+    }
 
-.arrow {
-    color: #1E272B;
-    margin-left: -70px;
-    font-size: 150px;
-}
+    h2 {
+        font-size: 25px;
+    }
 
-.vertical-center {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+    #name-profile {
+        color: #ecf0f1;
+        text-align: center;
+    }
 
-.arrow-vertical-center {
-    position: relative;
-    top: -45%;
-}
+    .arrow {
+        color: #1E272B;
+        margin-left: -70px;
+        font-size: 150px;
+    }
 
-.bar-box {
-    height: 100px;
-    text-align: center;
-    color: #ecf0f1;
+    .vertical-center {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .arrow-vertical-center {
+        position: relative;
+        top: -45%;
+    }
+
+    .bar-box {
+        height: 100px;
+        text-align: center;
+        color: #ecf0f1;
+    }
 }
 
 /*************************/
