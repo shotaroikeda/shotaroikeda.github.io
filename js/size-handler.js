@@ -90,4 +90,4 @@ var load_handler = function ()
 {
     docFill();
     size_handler();
-}
+};
