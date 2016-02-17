@@ -53,9 +53,9 @@ function size_handler()
         });
         $("#menu-close-canvas").css({
             "top": 0,
-            "left": "10px",
-            "width": "75px",
-            "height": "75px",
+            "right": 0,
+            "width": "25px",
+            "height": "25px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
@@ -136,6 +136,7 @@ $(document).ready(function () {
     $("#events-page").click(["#events-page"], arrow_animate);
     $("#contact-page").click(["#contact-page"], arrow_animate);
     $("#menu-icon-canvas").click(function () {
+        $(".content-portion").addClass("no-scroll");
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
             $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth }, 400);
@@ -144,6 +145,7 @@ $(document).ready(function () {
     });
 
     $("#menu-close-canvas").click(function () {
+        $(".content-portion").removeClass("no-scroll");
         $("#menu-close-canvas").fadeOut(400);
         $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
