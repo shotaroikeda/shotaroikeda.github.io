@@ -45,8 +45,8 @@ function size_handler()
         $("#menu-icon-canvas").css({
             "top": 0,
             "right": 0,
-            "width": "75px",
-            "height": "75px",
+            "width": "50px",
+            "height": "50px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
