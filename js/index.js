@@ -76,7 +76,7 @@ function size_handler()
             "z-index": 998,
             "top": "0",
             "bottom": "0",
-            "right": -1 * (window.innerWidth - 10) + "px",
+            "right": -1 * window.innerWidth + "px",
             "text-align": "center",
             "font-size": "200%",
             "overflow-x": "hidden",
