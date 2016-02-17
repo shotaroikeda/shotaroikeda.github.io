@@ -1,6 +1,7 @@
 var g_doc_height = 0;
 var mobile_view = false;
 
+// Dynamic CSS
 function scrollListener(element) {
     element.addEventListener("touchstart", function () {
         var top = element.scrollTop, totalScroll = element.scrollHeight, currentScroll = top + element.offsetHeight;
@@ -52,6 +53,7 @@ function size_handler()
 {
     if (window.innerWidth < 992 || screen.width < 992)
     {
+        $(".sidebar-elem").addClass("mobile-menu");
         // Set up formatting to reduce bugs
         $("#menu-icon-canvas").css({
             "top": 0,
@@ -87,7 +89,6 @@ function size_handler()
         $("#menu-icon-canvas").show();
         $("#menu-close-canvas").hide();
         $(".sidebar-elem").hide();
-        $(".sidebar-elem").addClass("mobile-menu");
         $(".sidebar-elem > .restFill").remove();
         mobile_view = true;
     }
@@ -163,8 +164,10 @@ $(document).ready(function () {
 
     scrollListener(document.querySelector(".sidebar-elem"));
 
-    docFill();
-    size_handler();
+    window.setTimeout(function () {
+        docFill();
+        size_handler();
+    }, 100);
 });
 
 $(window).resize(function () {
