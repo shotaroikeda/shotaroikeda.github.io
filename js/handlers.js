@@ -38,11 +38,12 @@ var activate_event_handlers = function () {
         });
     }
 
-    // add event listeners
+    // Event listeners for Sidebar
     $("#home-page").click(["#home-page"], arrow_animate);
     $("#projects-page").click(["#projects-page"], arrow_animate);
     $("#events-page").click(["#events-page"], arrow_animate);
     $("#contact-page").click(["#contact-page"], arrow_animate);
+    // Mobile only here
     $("#menu-icon-canvas").click(function () {
         $(".content-portion").addClass("no-scroll");
         $(".sidebar-elem").show();
@@ -51,7 +52,6 @@ var activate_event_handlers = function () {
             $("#menu-close-canvas").fadeIn(400);
         });
     });
-
     $("#menu-close-canvas").click(function () {
         $(".content-portion").removeClass("no-scroll");
         $("#menu-close-canvas").fadeOut(400);
@@ -60,5 +60,6 @@ var activate_event_handlers = function () {
         });
     });
 
+    // Fix ios closing bug using this
     scrollListener(document.querySelector(".sidebar-elem"));
 };
