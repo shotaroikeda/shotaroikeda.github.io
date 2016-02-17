@@ -39,7 +39,7 @@ body {
     .menu-close-canvas {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 10px;
         bottom: 0;
         height: 100px;
         width: 100px;

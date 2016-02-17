@@ -53,7 +53,7 @@ function size_handler()
         });
         $("#menu-close-canvas").css({
             "top": 0,
-            "left": 0,
+            "left": "10px",
             "width": "100px",
             "height": "100px",
             "z-index": 999,
