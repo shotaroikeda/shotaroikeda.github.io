@@ -76,12 +76,12 @@ function size_handler()
             "z-index": 998,
             "top": "0",
             "bottom": "0",
-            "right": -1 * (window.innerWidth - 10),
+            "right": -1 * (window.innerWidth - 10) + "px",
             "text-align": "center",
             "font-size": "200%",
             "overflow-x": "hidden",
             "overflow-y": "scroll",
-            "width": window.innerWidth - 10
+            "width": (window.innerWidth - 10) + "px"
         });
 
         $("#menu-icon-canvas").show();
@@ -150,7 +150,7 @@ $(document).ready(function () {
         $(".content-portion").addClass("no-scroll");
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
-            $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth - 10 }, 400);
+            $(".sidebar-elem").animate({ "right": "+=" + (window.innerWidth - 10) }, 400);
             $("#menu-close-canvas").fadeIn(400);
         });
     });
@@ -158,7 +158,7 @@ $(document).ready(function () {
     $("#menu-close-canvas").click(function () {
         $(".content-portion").removeClass("no-scroll");
         $("#menu-close-canvas").fadeOut(400);
-        $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth - 10 }, 400, function() {
+        $(".sidebar-elem").animate({ "right": "-=" + (window.innerWidth - 10) }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
         });
     });
