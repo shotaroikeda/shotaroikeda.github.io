@@ -136,8 +136,6 @@ $(document).ready(function () {
 
     $("#menu-close-canvas").hide();
 
-    docFill();
-    size_handler();
     // Set up the arrow to corresponding page
     $(".active-page > .arrow-vertical-center").append("<span class=\"arrow\">&#x25BA;</span>");
 
@@ -164,6 +162,9 @@ $(document).ready(function () {
     });
 
     scrollListener(document.querySelector(".sidebar-elem"));
+
+    docFill();
+    size_handler();
 });
 
 $(window).resize(function () {
