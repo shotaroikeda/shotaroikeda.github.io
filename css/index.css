@@ -24,7 +24,6 @@ body {
 @media (max-width: 991px) {
     /* Cell phone orientation */
     .no-scroll {
-	position: fixed;
 	overflow-y: hidden;
     }
 
