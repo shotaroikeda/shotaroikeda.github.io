@@ -20,7 +20,7 @@ function docFill() {
 
 function size_handler()
 {
-    if (window.innerWidth <= 991 || screen.width <= 991)
+    if (window.innerWidth <= 991)
     {
         $(".sidebar-elem").addClass("mobile-menu");
         // Set up formatting to reduce bugs
