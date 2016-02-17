@@ -41,8 +41,8 @@ body {
         top: 0;
         left: 10px;
         bottom: 0;
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
         z-index: 999;
         overflow: hidden;
     }
@@ -51,8 +51,8 @@ body {
         position: fixed;
         top: 0;
         bottom: 0;
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
         z-index: 999;
         overflow: hidden;
     }

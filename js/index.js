@@ -45,8 +45,8 @@ function size_handler()
         $("#menu-icon-canvas").css({
             "top": 0,
             "right": 0,
-            "width": "100px",
-            "height": "100px",
+            "width": "75px",
+            "height": "75px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
@@ -54,8 +54,8 @@ function size_handler()
         $("#menu-close-canvas").css({
             "top": 0,
             "left": "10px",
-            "width": "100px",
-            "height": "100px",
+            "width": "75px",
+            "height": "75px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
