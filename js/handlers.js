@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////
-// Handlers					       //
+// Handlers                                            //
 // Various handlers for GUI. Animations should go here //
 /////////////////////////////////////////////////////////
 function arrow_animate(clicked_data)
