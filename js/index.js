@@ -137,6 +137,7 @@ $(document).ready(function () {
     $("#contact-page").click(["#contact-page"], arrow_animate);
     $("#menu-icon-canvas").click(function () {
         $(".content-portion").addClass("no-scroll");
+	$(".content-portion").append("<ScrollView scrollEnabled={false}></ScrollView>");
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
             $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth }, 400);
@@ -146,6 +147,7 @@ $(document).ready(function () {
 
     $("#menu-close-canvas").click(function () {
         $(".content-portion").removeClass("no-scroll");
+        $(".content-portion > ScrollView").remove();
         $("#menu-close-canvas").fadeOut(400);
         $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
