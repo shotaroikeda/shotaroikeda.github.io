@@ -147,7 +147,7 @@ body {
 }
 
 .no-scroll {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /*************************/
