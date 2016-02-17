@@ -62,7 +62,7 @@ function size_handler()
         });
         $(".mobile-menu").css({
             "position": "fixed",
-            "z-index": "999",
+            "z-index": 998,
             "top": "0",
             "bottom": "0",
             "right": "-320px",
