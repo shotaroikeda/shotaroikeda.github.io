@@ -41,12 +41,12 @@ function size_handler()
 {
     if (window.innerWidth < 992 || screen.width < 992)
     {
-	// Set up formatting to reduce bugs
+        // Set up formatting to reduce bugs
         $("#menu-icon-canvas").css({
             "top": 0,
             "right": 0,
-            "width": "50px",
-            "height": "50px",
+            "width": "100px",
+            "height": "100px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
@@ -54,8 +54,8 @@ function size_handler()
         $("#menu-close-canvas").css({
             "top": 0,
             "left": 0,
-            "width": "50px",
-            "height": "50px",
+            "width": "100px",
+            "height": "100px",
             "z-index": 999,
             "overflow": "hidden",
             "position": "fixed"
@@ -65,12 +65,12 @@ function size_handler()
             "z-index": 998,
             "top": "0",
             "bottom": "0",
-            "right": "-320px",
+            "right": -1 * window.innerWidth,
             "text-align": "center",
             "font-size": "200%",
             "overflow-x": "hidden",
             "overflow-y": "scroll",
-            "width": "320px"
+            "width": window.innerWidth - 10
         });
 
         $("#menu-icon-canvas").show();
@@ -85,14 +85,14 @@ function size_handler()
         $("#menu-icon-canvas").hide();
         $("#menu-close-canvas").hide();
         $(".sidebar-elem").removeClass("mobile-menu");
-	$(".sidebar-elem").css({
-	    "position": "static",
-	    "right": 0,
-	    "width": "100%",
-	    "overflow": "visible",
-	    "overflow-x": "visible",
-	    "overflow-y": "visible"
-	});
+        $(".sidebar-elem").css({
+            "position": "static",
+            "right": 0,
+            "width": "100%",
+            "overflow": "visible",
+            "overflow-x": "visible",
+            "overflow-y": "visible"
+        });
         $(".sidebar-elem").show(0, function () {
             if (mobile_view)
             {
@@ -138,14 +138,14 @@ $(document).ready(function () {
     $("#menu-icon-canvas").click(function () {
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
-            $(".sidebar-elem").animate({ "right": "+=320px" }, 400);
+            $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth }, 400);
             $("#menu-close-canvas").fadeIn(400);
         });
     });
 
     $("#menu-close-canvas").click(function () {
         $("#menu-close-canvas").fadeOut(400);
-        $(".sidebar-elem").animate({ "right": "-=320px" }, 400, function() {
+        $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
         });
     });

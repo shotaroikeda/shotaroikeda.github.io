@@ -21,6 +21,61 @@ body {
 /**********************/
 /* Sidebar Management */
 /**********************/
+@media (max-width: 991px) {
+    /* Cell phone orientation */
+    .mobile-menu {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        bottom: 0;
+        right: -320px;
+        text-align: center;
+        font-size: 200%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 320px;
+    }
+
+    .menu-close-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100px;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .menu-icon-canvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100px;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .sidebar-elem {
+        background-color: #D14841;
+        height: auto;
+        font-size: 80%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    body {
+	font-size: 30px;
+    }
+}
+
 .mobile-menu {
     position: fixed;
     z-index: 998;
@@ -33,6 +88,7 @@ body {
     overflow-y: scroll;
     width: 320px;
 }
+
 .menu-close-canvas {
     position: fixed;
     top: 0;
