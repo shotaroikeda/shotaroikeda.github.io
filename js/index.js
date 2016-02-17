@@ -76,8 +76,7 @@ function size_handler()
             "z-index": 998,
             "top": "0",
             "bottom": "0",
-	    "left": "10px",
-            "right": -1 * window.innerWidth,
+            "right": -1 * (window.innerWidth - 10),
             "text-align": "center",
             "font-size": "200%",
             "overflow-x": "hidden",
@@ -151,7 +150,7 @@ $(document).ready(function () {
         $(".content-portion").addClass("no-scroll");
         $(".sidebar-elem").show();
         $("#menu-icon-canvas").fadeOut(400, function (){
-            $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth }, 400);
+            $(".sidebar-elem").animate({ "right": "+=" + window.innerWidth - 10 }, 400);
             $("#menu-close-canvas").fadeIn(400);
         });
     });
@@ -159,7 +158,7 @@ $(document).ready(function () {
     $("#menu-close-canvas").click(function () {
         $(".content-portion").removeClass("no-scroll");
         $("#menu-close-canvas").fadeOut(400);
-        $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth }, 400, function() {
+        $(".sidebar-elem").animate({ "right": "-=" + window.innerWidth - 10 }, 400, function() {
             $("#menu-icon-canvas").fadeIn(800);
         });
     });
