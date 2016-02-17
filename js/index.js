@@ -76,6 +76,7 @@ function size_handler()
             "z-index": 998,
             "top": "0",
             "bottom": "0",
+	    "left": "10px",
             "right": -1 * window.innerWidth,
             "text-align": "center",
             "font-size": "200%",
