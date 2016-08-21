@@ -3798,6 +3798,17 @@ body.is-ie #sidebar > .inner {
     max-width: 100%;
 }
 
+ /* Custom sidebar elems */
+#sidebar nav div:before {
+    text-decoration: none;
+    text-align: center;
+}
+
+#sidebar nav div:after {
+    text-decoration: none;
+    text-align: center;
+}
+
 body.is-loading #sidebar > .inner {
     opacity: 0;
 }
