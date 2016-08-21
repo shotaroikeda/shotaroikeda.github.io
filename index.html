@@ -1,158 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+     Hyperspace by HTML5 UP
+     html5up.net | @ajlkn
+     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   -->
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, user-scalable=0" />
-    <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <!-- Custom CSS files -->
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/media.css" rel="stylesheet">
-    <link href="css/utility.css" rel="stylesheet">
+    <title>Hyperspace by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
   </head>
   <body>
-    <canvas id="menu-icon-canvas" width="50px" height="50px"></canvas>
-    <canvas id="menu-close-canvas" width="25px" height="25px"></canvas>
-    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-      <div class="container-fluid">
-	<!-- Edit in here! -->
-        <div class="content-portion inner-html home-content">
-          <h1>Welcome to my Home Page!</h1>
-          <p>Click here for my resume, otherwise keep looking!</p>
-          <h1>Who am I?</h1>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+      <div class="inner">
+        <nav>
+          <ul>
+            <li><a href="#intro">Welcome</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Intro -->
+      <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+          <h1>Shotaro Ikeda</h1>
+          <ul class="actions">
+            <li><a href="resumes/resume_august_2016.pdf" class="button scrolly">Resume</a></li>
+          </ul>
           <p>When I first attended College, I was a Technical Systems Management Major in the College of Agriculture, Consumer, and Environmental Sciences. However, I felt that my interests did not quite align, so I decided to transfer into Computer Science after learning Python in the Winter of 2014.</p>
           <p>Ever since then, I've loved Computer Science!</p>
           <p>Now I am a Computer Science Major in the College of Engineering at University of Illinois at Urbana-Champaign, with a focus in Intelligence and Big Data.</p>
-          <p>My current interests are software development and Machine Learning. See the featured projects section below!</p>
-          <p>I am also Course Assistant for CS 196, where each one of us contributes to making this honors course a great experience for freshman looking to persue their interest in Computer Science!</p>
-          <p>I am always looking for new avenues to explore. Please contact me if you have a inqury about anything!</p>
-          <h1>Skills</h1>
-          <ul>
-            <li>Python</li>
-            <li>HTML/CSS/Javascript (including NodeJS)</li>
-            <li>Swift & iOS Application Development</li>
-            <li>C</li>
-            <li>Clojure</li>
+            <p>I am currently a Course Assistant for CS 196 and a systems developer for HackIllinois. <a href="#community">Learn more here</a>.</p>
+            <p>My current interests are software development and Machine Learning. <a href="#projects">Learn more</a>.</p>
+            <p>I am always looking for new avenues to explore. Please contact me if you have a inqury about anything!</p>
+        </div>
+      </section>
+
+      <!-- Community -->
+      <section id="community" class="wrapper style2 spotlights">
+        <section>
+          <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+          <div class="content">
+            <div class="inner">
+              <h2>CS 196 @ UIUC</h2>
+              <p>I have been a Course Assistant from the Fall of 2015. I have helped lead one project per semester, such as <a href="https://github.com/orgs/InterestMatcher/">Interest Matcher</a> and <a href="https://github.com/orgs/SNAPPETITE/">Snappetite</a>. For the current (Fall 2016) semester, I am part of the Homework team, creating the student's homework.</p>
+              <ul class="actions">
+                <li><a href="#" class="button">Course Website (Currently Unavailable)</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+          <div class="content">
+            <div class="inner">
+              <h2>HackIllinois</h2>
+              <p>I have participated in planning HackIllinois from Fall of 2015. For Fall of 2015, I administered the iOS version of the cluehunt, which had approxmitately 300 downloads and 172 participants. I am currently in charge of the official, open source, iOS application for the event as well as leading the systems team. </p>
+              <ul class="actions">
+                <li><a href="https://www.hackillinois.org" class="button">Event Homepage for Spring 2016</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="wrapper style3 fade-up">
+        <div class="inner">
+          <h2>Projects</h2>
+          <p>These are projects that I am currently working on or recently finished.</p>
+          <div class="features">
+            <section>
+              <a href="https://github.com/shotaroikeda/MoodTrakr"><span class="icon major fa-github"></span></a>
+              <h3>MoodTrackr</h3>
+              <h4>June 2016 - Present</h4>
+              <p>A program to track mood's around you using Twitter's API feed. Currently done with conversion of data for easier processing. I am planning on using a hand-coded version of a decision tree (probably ID3 algorithm) to persue my understanding of Machine Learning.</p>
+            </section>
+            <section>
+              <a href="https://github.com/shotaroikeda/HandReader2"><span class="icon major fa-github"></span></a>
+              <h3>Handreader2</h3>
+	      <h4>October 2015</h4>
+              <p>A revisited version of an older project, predicting handwritten numbers using Naive Bayes. Scores approximately 83% accuracy depending on which portion of the dataset is used. This was mainly used to provide a nice tutorial and introduction to machine learning for CS 196.</p>
+            </section>
+            <section>
+              <a href="https://github.com/HackIllinois/api-2017"><span class="icon major fa-github"></span></a>
+              <h3>HackIllinois API</h3>
+	      <h4>June 2016</h4>
+              <p>Open source project. Added the password reset feature to the user model. Specficially worked on checking for token expiration as well as a POST endpoint for resetting a user's password given a token.</p>
+            </section>
+            <section>
+              <a href="https://github.com/shotaroikeda/LiquidFloatingActionButton"><span class="icon major fa-github"></span></a>
+              <h3>LiquidFloatingActionButton</h3>
+	      <h4>May 2016</h4>
+              <p>Open source project. Added slighly faster rendering (approximately 2-5 FPS for iPhone 5 running iOS 9.3) as well as exposing a method to change individual button colors. </p>
+            </section>
+            <section>
+              <a href="https://github.com/HackIllinois/iphone-2017"><span class="icon major fa-github"></span></a>
+              <h3>HackIllinois iOS Application</h3>
+	      <h4>May 2016 - Present</h4>
+              <p>Open source project. Created a multipurpose application for hackathons (and general events), coming with a set with the backend. Currently supports event feed, maps, schedule, and user profile. HackerHelp is currently under development.</p>
+            </section>
+	    <section>
+	    </section>
+          </div>
+          <ul class="actions">
+            <li><a href="https://github.com/shotaroikeda?tab=repositories" class="button">More Projects</a></li>
           </ul>
         </div>
-        <div class="content-portion inner-html home-content">
-          <h1>Featured Projects</h1>
-          <div class="project">
-            <h2>This Website!</h2>
-            <p>I had a design concept for this website, taking advantage of Google's Material design, with my twist on it. I use jQuery with animations to make the sidebar work. In addition, I made this website work for multiple devices (including mobile)!</p>
-            <p><a href="https://github.com/shotaroikeda/shotaroikeda.github.io">GitHub</a></p>
-          </div>
-          <div class="project">
-            <h2>Pebble-CSGO</h2>
-            <p>My first Pebble application that uses Valve Corporation's Counter Strike: Global Offensive's Game State Integration API. So far it does not display any in-game information, but vibrates when certain elements in the game is activated. This application uses NodeJS for scripting a small backend, Javascript for Pebble's App configuration, and C for Pebble's application.</p>
-            <p><a href="https://github.com/shotaroikeda/Pebble-CSGO">GitHub</a></p>
-          </div>
-          <div class="project">
-            <h2>ClueHunt for HackIllinois</h2>
-            <p>My first iOS application made in Swift for HackIllinois. This is planned to be a side event, where people search the Engineering Quad for QR codes that we set up. I planned out the clue locations and hunt logistics, as well as creating core portions of the iOS application. </p>
-            <p>* URL is unavailable due to the code being proprietary.</p>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="wrapper style1 fade-up">
+        <div class="inner">
+          <h2>Education</h2>
+	  <p>Technical System Management at University of Illinois at Urbana Champaign from Fall 2014 - Fall 2015</p>
+          <p>Bachelor of Science Computer Science at University of Illinois at Urbana Champaign from Spring 2016 - Present</p>
+	  <p>GPA 3.60 / 4.0 -- Graduation May 2018</p>
+	  <h2>Relevant Technical Classes</h2>
+          <div class="features">
+            <section>
+	      <h3>Fall 2014</h3>
+	      <p>Did not take any Computer Science courses.</p>
+            </section>
+	    <section>
+	      <h3>Spring 2015</h3>
+	      <ul>
+		<li>CS 125 - Introduction to Computer Science</li>
+		<li>CS 196-25 - Freshman Honors Course</li>
+	      </ul>
+	    </section>
+            <section>
+	      <h3>Fall 2015</h3>
+	      <ul>
+		<li>CS 173 - Discrete Structures</li>
+		<li>CS 225 - Data Structures</li>
+		<li>CS 397 - Course Assistant for CS 196-25</li>
+	      </ul>
+            </section>
+	    <section>
+	      <h3>Spring 2016</h3>
+	      <ul>
+		<li>CS 233 - Systems Architecture</li>
+		<li>CS 241 - Systems Programming</li>
+		<li>CS 421 - Programming Languages and Compilers</li>
+	      </ul>
+	    </section>
+	    <section>
+	      <h3>Fall 2016</h3>
+	      <ul>
+		<li>CS 374 - Introduction to Algorithms and Models of Computation</li>
+		<li>CS 427 - Software Engineering I</li>
+		<li>CS 461 - Computer Security I</li>
+		<li>CS 498SL3 - Virtual Reality</li>
+	      </ul>
+	    </section>
+	    <section>
+	    </section>
           </div>
         </div>
-        <div class="content-portion inner-html home-content">
-          <h1>Relevant Classes Taken/In Progress</h1>
-          <p>This is just a small list for those who are curious.</p>
-          <h2>Spring 2015</h2>
-          <ul>
-            <li>CS 125 - Object Orientated Programming</li>
-            <li>CS 196 Honors - Project Based Honors Course</li>
-          </ul>
-          <h2>Fall 2015</h2>
-          <ul>
-            <li>CS 173 - Discrete Mathematics</li>
-            <li>CS 225 - Data Structures</li>
-            <li>CS 296 Honors - Introduction to Functional Programming (and Immutable Data structures)</li>
-	    <li>CS 375 - Individual Study (Course Assistant for CS 196)</li>
-          </ul>
-          <h2>Spring 2016</h2>
-          <ul>
-            <li>CS 233 - Systems Architecture</li>
-            <li>CS 241 - Systems Programming</li>
-            <li>CS 421 - Programming Languages and Compilers</li>
-	    <li>CS 375 - Individual Study (Course Assistant for CS 196)</li>
-          </ul>
-        </div>
-	<!-- Edit in here! -->
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>Design obtained from: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
       </div>
-    </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-md-4 col-lg-3">
-        <div class="sidebar-elem">
-          <div class="row" id="name-profile">
-            <h1>Shotaro Ikeda</h1>
-            <h2>B.S. Computer Science</h2>
-            <h2>University of Illinois at
-              <br>
-              Urbana-Champaign</h2>
-          </div>
-          <div class="row" id="home-page">
-            <div class="col-xs-1 bar-box active-page">
-              <div class="arrow-vertical-center">
-              </div>
-            </div>
-            <div class="bar-box">
-              <div class="vertical-center">
-                <h2>HOME</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row" id="projects-page">
-            <div class="col-xs-1 bar-box">
-              <div class="arrow-vertical-center">
-              </div>
-            </div>
-            <div class="bar-box">
-              <div class="vertical-center">
-                <h2>PROJECTS</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row" id="events-page">
-            <div class="col-xs-1 bar-box">
-              <div class="arrow-vertical-center">
-              </div>
-            </div>
-            <div class="bar-box">
-              <div class="vertical-center">
-                <h2>EVENTS</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row" id="contact-page">
-            <div class="col-xs-1 bar-box">
-              <div class="arrow-vertical-center">
-              </div>
-            </div>
-            <div class="bar-box">
-              <div class="vertical-center">
-                <h2>CONTACT</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <a href="src/resume.pdf">
-              <div class="col-xs-1 bar-box">
-              </div>
-              <div class="bar-box">
-                <div class="vertical-center">
-                  <h2>RESUME</h2>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="restFill">
-          </div>
-        </div>
-      </div>
-    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
   </body>
-  <script src="js/icon-handler.js"></script>
-  <script src="js/size-handler.js"></script>
-  <script src="js/handlers.js"></script>
-  <script src="js/index.js"></script>
 </html>
