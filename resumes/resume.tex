@@ -10,6 +10,12 @@
 \renewcommand{\sc}{\textsc}
 \renewcommand{\it}{\textit}
 
+\newenvironment{itemize*}%
+{\begin{itemize}%
+    \vspace{-0.7em}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
 \begin{document}
 
 \part{Shotaro Ikeda}
@@ -40,21 +46,21 @@
   {CS 196}
   {Course Assistant}
 
-  \begin{itemize}
+  \begin{itemize*}
   \item Currently writing homework assignments for students, very active helping students.
   \item Managed three projects, \href{https://github.com/SNAPPETITE}{Snappettite}, \href{https://github.com/InterestMatcher}{Interest Matcher}, and currently SentiMiner.
   \item Lead Artificial Intelligence Hackerspace, taught Freshman how to use the Naive Bayes Classifier to process and use the MNIST dataset.
-  \end{itemize}
+  \end{itemize*}
 
   \eventData{August 2015 -- Present}
   {HackIllinois}
   {Mobile/Backend Developer}
-  \begin{itemize}
+  \begin{itemize*}
   \item Engaged in the ``Open Hackathon'' initiative.
   \item Currently lead developer of the official iOS Application and contributing to \\
     backend development.
   \item Administered official cluehunt application in 2015. iOS version had 51 users.
-  \end{itemize}
+  \end{itemize*}
 
 \end{eventlist}
 
@@ -83,45 +89,59 @@
 
 \begin{projectlist}
 
-  \project{October 2016 -- Present}
+  \project{October 2016 -- November 2016}
   {HandReader3}
-  \begin{itemize}
-  \item W.I.P. Hand digit recognizition, previously done with Naive Bayes, scoring 84.3\% accuracy. Current aiming for ~99\% accuracy with Convultional Neural Networks.
-  \item Currently ~95\% with regular netural network (784 Input nodes, 10 hidden nodes, 10 output nodes).
-  \end{itemize}
+  \begin{itemize*}
+  \item Achieved ~95\% with regular netural network (784 Input nodes, 10 hidden nodes, 10 output nodes).
+  \item 99.2\% using Softmax and Convolutions, using Tensorflow.
+  \end{itemize*}
+
+  \project{November 2016 -- Present}
+  {Hive}
+  \begin{itemize*}
+  \item Wildhacks 2016 Entry, predict final Reddit scores given post title
+  \item Exploration of Tensorflow+NLP was the main goal, figuring out why Bag-of-Words is considered outdated.
+  \item Bag of Words and 1-gram model, input vector size was 10009.
+  \item Some posts were predicted well (within 400 votes) while others were off (some were predicted negative).
+  \end{itemize*}
+
+  \project{November 2016 -- Present}
+  {Titanic}
+  \begin{itemize*}
+  \item Kaggle Competition Entry, predicting who survives on the Titanic
+  \item 76\% accuracy using Random Forest Classifier, no hypertuning
+  \end{itemize*}
 
   \project{May 2016 -- Present}
   {HackIllinois iOS App}
-
-  \begin{itemize}
+  \begin{itemize*}
   \item Current project for HackIllinois. Open Source.
   \item Features basic event features for Hackathons.
-  \end{itemize}
+  \end{itemize*}
 
   \project{September 2016}
   {Regex Cross-Compiler}
-  \begin{itemize}
+  \begin{itemize*}
   \item Fun side project to cross compile Mathmatical Regular Expressions to Python Regex.
   \item Generates syntax tree to parse and \\
     transform into Python Regex.
 
-  \end{itemize}
+  \end{itemize*}
   \project{June 2016}
   {LiquidActionButton}
-  \begin{itemize}
+  \begin{itemize*}
   \item Open source project. Material design button ported to iOS.
   \item Added more versatility and obtained small \\
     performance gain, about 5FPS.
-  \end{itemize}
+  \end{itemize*}
 
   \project{Feburary 2015}
   {Flash Me!}
-  \begin{itemize}
+  \begin{itemize*}
   \item SpartaHack 2016 Submission.
   \item Created iOS application, created weighting \\
     algorithm to increase the probability of showing cards that were marked incorrect.
-  \end{itemize}
-
+  \end{itemize*}
 
 \end{projectlist}
 
@@ -141,11 +161,11 @@
 \end{factlist}
 
 \section{Interests}
-\begin{itemize}
+\begin{itemize*}
 \item Machine Learning, Artificial Intelligence, \\
   Backend, and Full-stack.
 \item Creative work, difficult, non-trival, or \\
   challenging problems.
-\end{itemize}
+\end{itemize*}
 
 \end{document}
