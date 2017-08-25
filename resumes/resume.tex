@@ -3,13 +3,33 @@
 %%% mode: latex
 %%% TeX-engine: xetex
 %%% End:
-\documentclass{tccv}
+\documentclass[9pt,a4paper,sans]{moderncv}
+
+
+% Modern CV Style
+\moderncvstyle{classic}
+\moderncvcolor{purple}
+
+\usepackage{color}
 
 \usepackage[english]{babel}
 \usepackage[none]{hyphenat}
-\renewcommand{\bf}{\textbf}
-\renewcommand{\sc}{\textsc}
-\renewcommand{\it}{\textit}
+
+% Color definitions
+\definecolor{kwcolor}{RGB}{229,81,107}
+\definecolor{hrefcolor}{RGB}{90,90,232}
+
+%% Change main color to maroon
+\definecolor{color0}{RGB}{0,0,0}
+\definecolor{color1}{RGB}{136,22,22}
+
+\newcommand{\kw}[1]{%
+  #1%
+}%
+
+\newcommand{\chref}[2]{%
+  \textit{\href{#1}{#2}}%
+}%
 
 \newenvironment{itemize*}%
 {\begin{itemize}%
@@ -17,159 +37,103 @@
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}}%
   {\end{itemize}}
+
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+\firstname{Shotaro}
+\familyname{Ikeda}
+\email{ikeda2@illinois.edu}                      % optional, remove the line if not wanted
+\homepage{shotaroikeda.github.io}                % optional, remove the line if not wanted
+\social[linkedin]{shotaroikeda}                        % optional, remove / comment the line if not wanted
+\quote{\small Studious, Ambitious, and Innovative Artificial Intelligence Researcher.}
+% \extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
 \begin{document}
-
-\part{Shotaro Ikeda}
-
-\personal
-[shotaroikeda.github.io]
-{APT 5 404 E. Stoughton Ave \newline
-  Champaign, IL 61820}
-{+1 (408) 513-5376}
-{ikeda2@illinois.edu}
+\maketitle
 
 \section{Education}
-
-\begin{yearlist}
-
-  \education{B.S. Computer Science}{2014 - Present}
-  {University of Illinois at  \newline Urbana-Champaign}
-  {GPA: 3.70 / 4.0}
-  {Graduation: May 2018}
-
-\end{yearlist}
+\cventry{2014--Now}{BS. Computer Science}{University of Illinois at Urbana-Champaign}{Urbana, IL}{}{}
+\cvline{GPA}{\small 3.72/4.0}
+\cvline{Graduation}{May 2018}
 
 \section{Work experience}
-
-\begin{eventlist}
-  \eventData{Dec 2015 -- Jan 2016}
-  {Double Sharp Plus Co. Ltd}
-  {Internship}
-
+\cventry{2017--Now}{Undergraduate Research Assistant}{University of Illinois at Urbana-Champaign}{Urbana, IL}{}{%
   \begin{itemize*}
-  \item OCR on number plates, mined my own dataset
+  \item Research to give agents spatial awareness.
+  \item Speed up extra supervision networks for \kw{Reinforcement Learning}.
+  \end{itemize*}
+}%
+
+\cventry{Summer 2017}{Technical Development Program Intern}{Capital One}{Richmond, VA}{}{%
+  \begin{itemize*}
+  \item Fast, repeatable, and robust solution for comparing data quality of multiple competing services.
+  \item Database comparisons using \kw{Python}, \kw{Numpy}, \kw{Pandas}, and \kw{Matplotlib}.
+  \item Engaged proof of concept for logo recognition using \kw{Deep Learning} with \kw{Keras}.
+  \item Provided mentor-ship to increase validation accuracy from 85\% to 96\%.
+  \end{itemize*}
+}%
+
+\cventry{2015--2017}{Course Assistant}{CS 196}{Champaign, IL}{}{%
+  \begin{itemize*}
+  \item Involved in making course materials, quality assurance, and acted as one of the instructors of the class.
+  \item Gave lectures in \kw{Theory}, \kw{Algorithms}, \kw{Recursion}, \kw{AI}, and \kw{Machine Learning}.
+  \end{itemize*}
+}%
+
+\cventry{Winter 2016}{Intern}{Double Sharp Plus Co. Ltd}{Hachiouji, Japan}{}{%
+  \begin{itemize*}
+  \item \kw{Object Character Recognition} on number plates, mined my own dataset
   \item Histogram approach had 60\% accuracy on test set I provided
-  \item SVM Classifier using LBP Algorithms ~50\% accuracy
-  \item Implemented Convolutional Neural Network based off of CAPTCHA
+  \item \kw{Support Vector Machine} Classifier using Local Binary Pattern algorithm, with ~50\% accuracy
+  \item Implemented \kw{Deep Convolutional Neural Network} in \kw{Tensorflow} based off of CAPTCHA, with ~80\% accuracy
   \end{itemize*}
+}%
 
-  \eventData{Jun 2015 -- Present}
-  {CS 196}
-  {Course Assistant}
-
+\section{Projects}
+\cventry{2017--Now}{DFP-PyTorch}{Undergraduate Research Assistant}{University of Illihnois at Urbana-Champaign}{Urbana, IL}{%
   \begin{itemize*}
-  \item Staff involved in working to make course materials, quality assurance, homework, and feedback to instructor.
-  \item Managed three projects, \href{https://github.com/SNAPPETITE}{Snappettite}, \href{https://github.com/InterestMatcher}{Interest Matcher}, and \href{https://github.com/GlobusTroy/SentiMiner}{SentiMiner}.
+  \item State of the art agent that won \href{http://vizdoom.cs.put.edu.pl/competition-cig-2016/results}{ViZDoom AI Competition 2016 (Deathmatch)}.
+  \item Implemented \chref{https://arxiv.org/abs/1611.01779}{Learning to Act by Predicting the Future} (Dosovitskiy, et. al) in \kw{PyTorch}.
+  \item Implemented general experimentation architecture for future research.
+  \item Implemented a generalization for multiple sparse input streams.
   \end{itemize*}
+}
 
-  \eventData{Aug 2015 -- Present}
-  {HackIllinois}
-  {Systems Lead}
+\cventry{Summer 2017}{FCRN-PyTorch}{Undergraduate Research Assistant}{University of Illinois at Urbana-Champaign}{Urbana, IL}{%
   \begin{itemize*}
-  \item Currently lead developer of the official iOS Application and contributing to \\
-    backend development.
+  \item State of the art Depth Prediction Network.
+  \item Implemented \chref{https://arxiv.org/abs/1606.00373}{Deeper Depth Prediction with Fully Convolutional Residual Networks} (Laina, et. al) in \kw{PyTorch}.
+  \item Provided additional base layers (ResNet-18, ResNet-34) for further experimentation.
   \end{itemize*}
+}
 
-\end{eventlist}
-
-\section{Relevant Coursework}
-\begin{courselist}
-
-  \eventData{Courses Taken}
-  \begin{tabular}{l l}
-    CS 241 & Systems Programming \\
-    CS 374 & Algos. and Models of Computation \\
-    CS 421 & Programming Languages \\
-    CS 427 & Software Engineering I \\
-    CS 461 & Computer Security I \\
-  \end{tabular}
-
-  \eventData{Current Courses}
-  \begin{tabular}{l l}
-    CS 473 & Algorithms II \\
-    CS 498AML & Applied Machine Learning \\
-  \end{tabular}
-  \forceskip
-  Full list available on \href{https://shotaroikeda.github.io/}{my website}.
-
-\end{courselist}
-
-\section{projects}
-
-\begin{projectlist}
-
-  \project{Oct 2016 -- Nov 2016}
-  {HandReader3}
+\cventry{Spring 2017}{CartPole-DQN}{Personal}{}{}{ %
   \begin{itemize*}
-  \item Achieved ~95\% with hand-coded
-    regular neutral network (784 Input nodes, 10 hidden nodes, 10 output nodes).
-  \item ~99.2\% using Softmax and Convolutional Layers. Used Tensorflow.
+  \item Implemented a \kw{Deep Q-Network} in \kw{PyTorch}.
+  \item Experimented with Reward Shaping to provide additional supervision and help convergence.
   \end{itemize*}
+}
 
-  \project{Nov 2016}
-  {Hive}
+
+\cventry{Spring 2017}{Wide Residual Network}{Personal}{}{}{%
   \begin{itemize*}
-  \item Wildhacks 2016 Entry, predict final Reddit scores given post title
-  \item Explored Tensorflow+NLP, challenging myself to mine data+come up with a network in 36 hours.
-  \item Also tried to experiment in figuring out why Bag-of-Words is considered outdated.
-  \item Bag-of-Words and 1-gram model, input vector size was 10009.
-  \item Some posts were predicted well (within 400 votes) while others were off (some were predicted negative).
+  \item A variation of the cutting-edge ResNet architecture.
+  \item Implemented \chref{https://arxiv.org/abs/1605.07146}{Wide Residual Networks} (Zagoruyko, et. al) in \kw{Tensorflow}.
+  \item Obtained ~93.9\% accuracy training on CIFAR-10.
   \end{itemize*}
+}
 
-  \project{Nov 2016 -- Present}
-  {Titanic}
+\cventry{Spring 2017}{Autoencoders}{Personal}{}{}{%
   \begin{itemize*}
-  \item Kaggle Competition Entry, predicting who survives on the Titanic
-  \item 76\% accuracy using Random Forest Classifier, no hyper-tuning
+  \item Implemented a \kw{Variational Autoencoder} (VAE) and \kw{Stacked Denoising Autoencoder} in \kw{Tensorflow}.
+  \item Experimented with different activation functions and latent variable sizes.
   \end{itemize*}
-
-  \project{Sept 2016}
-  {Regex Cross-Compiler}
-  \begin{itemize*}
-  \item Fun side project to cross compile Mathematical Regular Expressions to Python Regex.
-  \item Generates syntax tree to parse and \\
-    transform into Python Regex.
-
-  \end{itemize*}
-  \project{Jun 2016}
-  {LiquidActionButton}
-  \begin{itemize*}
-  \item Open source project. Material design button ported to iOS.
-  \item Added more versatility and obtained small \\
-    performance gain, about 5FPS.
-  \end{itemize*}
-
-  \project{Feb 2015}
-  {Flash Me!}
-  \begin{itemize*}
-  \item SpartaHack 2016 Submission.
-  \item Created iOS application, created weighting \\
-    algorithm to increase the probability of showing cards that were marked incorrect.
-  \end{itemize*}
-
-\end{projectlist}
-
-\section{Languages}
-
-\begin{factlist}
-
-  \eventData{Comfortable}
-  {C, Python}
-
-  \eventData{Previously Used}
-  {Swift, JavaScript, CSS, HTML, Clojure, Haskell, and LaTeX}
-
-  \eventData{Used in Classes}
-  {Java and C++}
-
-\end{factlist}
-
-\section{Interests}
-\begin{itemize*}
-\item Machine Learning, Artificial Intelligence, \\
-  Backend, and Full-stack.
-\item Creative, difficult, non trivial, or \\
-  challenging problems.
-\end{itemize*}
-
+}
 \end{document}
+
+%% Feedback
+% Numbers are really good, add more if possible
+% Mention paper versatility in elevator pitch/tagline
+% Differentiate between types of project (personal/research, etc)
