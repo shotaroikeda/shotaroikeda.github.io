@@ -1,0 +1,185 @@
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% End:
+\documentclass[9pt,a4paper,sans]{moderncv}
+
+
+% Modern CV Style
+\moderncvstyle{classic}
+\moderncvcolor{purple}
+
+\usepackage{color}
+
+\usepackage[english]{babel}
+\usepackage[none]{hyphenat}
+
+% Color definitions
+\definecolor{kwcolor}{RGB}{229,81,107}
+\definecolor{hrefcolor}{RGB}{90,90,232}
+
+%% Change main color to maroon
+\definecolor{color0}{RGB}{0,0,0}
+\definecolor{color1}{RGB}{136,22,22}
+
+\newcommand{\kw}[1]{%
+  #1%
+}%
+
+\newcommand{\chref}[2]{%
+  \textit{\href{#1}{#2}}%
+}%
+
+
+\newenvironment{itemize*}%
+{\begin{itemize}%
+    \vspace{-0.7em}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+\firstname{Shotaro}
+\familyname{Ikeda}
+\email{ikeda2@illinois.edu}                      % optional, remove the line if not wanted
+\homepage{shotaroikeda.github.io}                % optional, remove the line if not wanted
+\social[linkedin]{shotaroikeda}                        % optional, remove / comment the line if not wanted
+% \extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
+\begin{document}
+\maketitle
+
+\section{Research Goals}
+I would like to address fundamental issues with reinforcement learning, such as the inadequacies of reward functions, instability in hyperparameter choice, reduction in state space, faster learning in deep methods, and creating a better exploration algorithm.
+In addition, I wish to apply reinforcement learning to include spatial and temporal awareness to improve existing policies.
+
+\section{Education}
+\cventry{2014--Now}{BS. Computer Science}{University of Illinois at Urbana-Champaign}{Urbana, IL}{}{}
+\cvline{GPA}{\small 3.72/4.0}
+\cvline{Graduation}{May 2018}
+
+\section{Research Experience}
+\cventry{2017--Now}{Undergraduate Research Assistant}{University of Illinois at Urbana-Champaign}{Urbana, IL}{}{%
+  \begin{itemize*}
+  \item Attempted to include spatial awareness into reinforcement learning agents.
+  \item Advised by \href{http://www.alexander-schwing.de/}{Professor Alexander Schwing} and \href{http://jianpeng.web.engr.illinois.edu/}{Jian Peng}
+  \item Initially attempted to include Simulanteous Localization and Mapping (SLAM) as stated in \chref{https://arxiv.org/abs/1612.00380}{Playing Doom with SLAM-Augmented Deep Reinforcement Learning}. Found inadequacies in speed and flexibility.
+  \item Implemented \chref{https://arxiv.org/abs/1611.01779}{Learning to Act by Predicting the Future} in PyTorch.
+  \item Currently doing an in depth study on usefulness of maps.
+  \end{itemize*}
+}%
+
+\section{Work Experience}
+\cventry{2015--2017}{Course Assistant}{CS 196}{Champaign, IL}{}{%
+  \begin{itemize*}
+  \item Began as a project manager, overseeing various types of projects such as web, iOS, and machine learning applications.
+  \item During my job as a project manager, I guided my students and mentored their progress.
+  \item Starting from Fall 2016, I took an active leadership role by writing homework problems.
+  \item Held office hours 1 hour every Monday, Tuesday, and Thursday. Engaged students to help them understand class concepts.
+  \item Given lectures on Theory (Spring 2017, Fall 2017), Algorithms (Spring 2017, Fall 2017), Recursion (Spring 2017, Fall 2017), Artificial Intelligence (Spring 2016, Spring 2017), and Machine Learning (Spring 2016, Fall 2017).
+  \end{itemize*}
+}%
+
+\cventry{Summer 2017}{TDP Intern}{Capital One}{Richmond, VA}{}{%
+  \begin{itemize*}
+  \item Worked as a data engineer.
+  \item Did thorough statistical analysis on two different data collection services.
+  \item Assisted proof of concept for logo recognition using Deep Learning with Keras.
+  \item Provided mentorship to increase validation accuracy from 85\% to 96\%.
+  \end{itemize*}
+}%
+
+\cventry{Winter 2016}{Intern}{Double Sharp Plus Co. Ltd}{Hachiouji, Japan}{}{%
+  \begin{itemize*}
+  \item Worked on Japanese Automated Number Plate Recognition (ANPR) system.
+  \item Gained industry and real world computer vision experience.
+  \item Mined custom dataset, using heavy data augmentation.
+  \item Implemented approaches using histogram, Support Vector Machines (SVM) with Local Binary Pattern preprocessing, and Convolutional Neural Network (CNN) in Tensorflow.
+  \end{itemize*}
+}%
+
+\cventry{2015--2017}{Systems Lead}{HackIllinois}{Urbana, IL}{}{%
+  \begin{itemize*}
+  \item Organizer for University of Illinois' hackathon, HackIllinois across two years.
+  \item In the Spring 2016 hackathon, in charge of a clue-hunt application. Constructed iOS application from scratch and planned the clue hunt.
+  \item In the Spring 2017 hackathon, in charge of iOS application and some backend development using NodeJS.
+  \end{itemize*}
+}%
+
+\section{Projects}
+\cventry{2017--Now}{DFP-PyTorch}{Undergrad Research Assistant}{Uni. of Illinois at Urbana-Champaign}{Urbana, IL}{%
+  \begin{itemize*}
+  \item State of the art agent that won \href{http://vizdoom.cs.put.edu.pl/competition-cig-2016/results}{ViZDoom AI Competition 2016 (Deathmatch)}.
+  \item Implemented \chref{https://arxiv.org/abs/1611.01779}{Learning to Act by Predicting the Future} (Dosovitskiy, et. al) in \kw{PyTorch}.
+  \item Implemented general experimentation architecture for future research.
+  \end{itemize*}
+}
+
+\cventry{Summer 2017}{FCRN-PyTorch}{Undergrad Research Assistant}{Uni. of Illinois at Urbana-Champaign}{Urbana, IL}{%
+  \begin{itemize*}
+  \item State of the art Depth Prediction Network.
+  \item Implemented \chref{https://arxiv.org/abs/1606.00373}{Deeper Depth Prediction with Fully Convolutional Residual Networks} (Laina, et. al) in \kw{PyTorch}.
+  \item Provided additional base layers (ResNet-18, ResNet-34) for further experimentation.
+  \end{itemize*}
+}
+
+\cventry{Fall 2017}{Does WaveNet Dream of Acoustic Waves?}{}{Uni. of Illinois at Urbana-Champaign}{Urbana, IL}{%
+  \begin{itemize*}
+  \item Analysis on Google's \chref{https://arxiv.org/abs/1609.03499}{WaveNet} understanding speech.
+  \item Found that it constructs a fundamental feature extractor.
+  \item Implemented several patches to Vassilis Tsiaras' implementation of WaveNet, providing data for analysis.
+  \end{itemize*}
+}%
+
+\cventry{Fall 2017}{LBFGS and Reinforcement Learning}{}{Uni. of Illnois at Urbana-Champaign}{Urbana, IL}{%
+  \begin{itemize*}
+  \item In depth study comparing \chref{https://arxiv.org/abs/1412.6980}{ADAM} and L-BFGS for convergence in deep reinforcement learning.
+  \item Found that L-BFGS is not an in-place replacement for ADAM, and requires very different modules and hyperparameters for convergence.
+  \end{itemize*}
+}%
+
+\cventry{Spring 2017}{CartPole-DQN}{Personal}{}{}{ %
+  \begin{itemize*}
+  \item Implemented a \kw{Deep Q-Network} in \kw{PyTorch}.
+  \item Experimented with Reward Shaping to provide additional supervision and help convergence.
+  \item Able to increase stability with convergence.
+  \end{itemize*}
+}
+
+\cventry{Spring 2017}{Wide Residual Network}{Personal}{}{}{%
+  \begin{itemize*}
+  \item A variation of the cutting-edge ResNet architecture.
+  \item Implemented \chref{https://arxiv.org/abs/1605.07146}{Wide Residual Networks} (Zagoruyko, et. al) in \kw{Tensorflow}.
+  \item Obtained ~93.9\% accuracy training on CIFAR-10.
+  \end{itemize*}
+}
+
+\cventry{Spring 2017}{Autoencoders}{Personal}{}{}{%
+  \begin{itemize*}
+  \item Implemented a \kw{Variational Autoencoder} (VAE) and \kw{Stacked Denoising Autoencoder} in \kw{Tensorflow}.
+  \item Studied the effects of different activation functions and latent variable sizes affecting the convergence of these models.
+  \end{itemize*}
+}%
+
+\section{Course Work}
+\cventry{2014--Now}{Undergraduate}{Uni. of Illinois at Urbana-Champaign}{}{}{%
+  \begin{itemize*}
+  \item Spring 2015 -- CS 125, CS 196-25
+  \item Fall 2015 -- CS 173, CS 225, CS 397
+  \item Spring 2016 -- CS 233, CS 241, CS 421
+  \item Fall 2016 -- CS 374, CS 427, CS 461, CS 498SL3
+  \item Spring 2017 -- CS 498AML, CS 473
+  \item Fall 2017 -- CS 598PS, CS 544
+  \end{itemize*}
+}%
+
+\end{document}
+
+%% Feedback
+% Numbers are really good, add more if possible
+% Mention paper versatility in elevator pitch/tagline
+% Differentiate between types of project (personal/research, etc)
